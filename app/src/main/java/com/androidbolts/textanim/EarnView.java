@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 /**
- * Created by brainovation on 6/23/17.
+ * Created by Subhash on 6/23/17.
  */
 
 public class EarnView extends RelativeLayout {
