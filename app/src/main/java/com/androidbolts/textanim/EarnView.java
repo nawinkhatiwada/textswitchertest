@@ -53,6 +53,10 @@ public class EarnView extends RelativeLayout {
         }
     }
 
+    public void setCompletionListener(CompletionListener listener){
+        this.completionListener = listener;
+    }
+
     public void setEarnTime(long timeInSeconds) {
         this.earnTime = timeInSeconds;
     }
@@ -77,6 +81,8 @@ public class EarnView extends RelativeLayout {
                 timerTransition.startTransition(500);
                 tvTimer.setText("✓");
                 tvValue.setText(completeText);
+                if(completionListener!=null)
+                    completionListener.onComplete();
             }
         }.start();
     }
